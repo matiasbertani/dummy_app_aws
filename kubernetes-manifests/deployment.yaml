@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-hello-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dummy-hello-app
+  template:
+    metadata:
+      labels:
+        app: dummy-hello-app
+    spec:
+      containers:
+      - name: dummy-hello-app
+        image: matiasbertani/dummy-hello-app:1.0
+        ports:
+        - containerPort: 8050
+
