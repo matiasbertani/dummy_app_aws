@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dummy-hello-app
+  name: dummy-hello-app-lb
 spec:
   selector:
     app: dummy-hello-app
@@ -10,4 +10,3 @@ spec:
       port: 80
       targetPort: 8050
   type: LoadBalancer
-
