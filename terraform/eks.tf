@@ -28,7 +28,7 @@ module "eks" {
         max_size     = 3
         desired_size = 1
 
-        instance_types = ["t2.nano"]
+        instance_types = ["t3.large"]
       }
     }
 
