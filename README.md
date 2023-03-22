@@ -109,4 +109,5 @@ Here is a litle demo of the app working on aws and seeing the logs
 
 ![](demo.gif)
 
+Here is the [link](https://drive.google.com/file/d/1kndiadg3zru6OnKTRBvue_Wf6JtKrf5x/view?usp=sharing) to the video
 
