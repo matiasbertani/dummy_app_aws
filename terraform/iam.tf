@@ -2,7 +2,7 @@ resource "aws_iam_policy" "load_balancer_controller" {
   name        = "AmazonEKSLoadBalancerControllerPolicyTF"
   path        = "/"
   description = "Policy for load balancer controller on EKS"
-  policy = file("iam_policy.json")
+  policy      = file("iam_policy.json")
 }
 
 resource "aws_iam_role" "load_balancer_controller" {
@@ -21,9 +21,9 @@ resource "aws_iam_role" "load_balancer_controller" {
         Principal = {
           Federated = "${module.eks.oidc_provider_arn}"
         }
-        "Condition"= {
-          "StringEquals"= {
-                    "${module.eks.oidc_provider}:sub": "system:serviceaccount:kube-system:aws-load-balancer-controller"
+        "Condition" = {
+          "StringEquals" = {
+            "${module.eks.oidc_provider}:sub" : "system:serviceaccount:kube-system:aws-load-balancer-controller"
           }
         }
       }

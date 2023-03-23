@@ -9,14 +9,14 @@ module "eks" {
   subnet_ids = module.vpc.public_subnets
 
   eks_managed_node_groups = {
-      group1 = {
-        min_size     = 1
-        max_size     = 3
-        desired_size = 1
+    group1 = {
+      min_size     = 1
+      max_size     = 3
+      desired_size = 1
 
-        instance_types = ["t3.large"]
-      }
+      instance_types = ["t3.large"]
     }
+  }
 
   tags = {
     Terraform   = "true"
